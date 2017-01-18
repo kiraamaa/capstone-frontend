@@ -1,0 +1,9 @@
+{{my-application signOut="signOut"}}
+<div class="col-md-4 pull-right sidebar">
+  <form {{action 'save' on='submit'}} class="edit-form">
+    {{input placeholder='Favorite Title'
+            value=favorite.title}}
+    <button class='btn btn-xs form-button' type='submit'>Save</button>
+    <button class='btn btn-xs form-button' {{action 'cancel'}}>Cancel</button>
+  </form>
+</div>
