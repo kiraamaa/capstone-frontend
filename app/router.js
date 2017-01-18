@@ -15,6 +15,9 @@ Router.map(function () {
   this.route('artwalk', function() {
     this.route('edit');
   });
+  this.route('artwalks', function() {
+    this.route('new');
+  });
 });
 
 export default Router;

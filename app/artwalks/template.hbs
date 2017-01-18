@@ -1,0 +1,16 @@
+{{my-application signOut="signOut"}}
+
+<div class="col-md-4 pull-right sidebar">
+<h2>
+  Artwalks
+</h2>
+
+  {{#each model as |artwalk|}}
+    {{artwalk-walk/card artwalk=artwalk
+                      edit='editArtwalk'
+                      delete='deleteArtwalk'}}
+  {{/each}}<br>
+
+  <button class='btn btn-md'>{{#link-to 'artwalks/new' class="dynamic-a"}}Create a new artwalk{{/link-to}}</button>
+
+</div>
