@@ -1,4 +1,4 @@
-import ApplicationAdapter from 'ga-wdi-boston.ember-auth/application/adapter';
+import ApplicationAdapter from 'capstone-frontend/application/adapter';
 
 export default ApplicationAdapter.extend({
   createRecord (store, type, record) {
