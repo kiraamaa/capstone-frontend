@@ -1,0 +1,19 @@
+$background-opacity: rgba(0, 0, 0, .7);
+
+.welcome-div {
+  background-color: $background-opacity;
+  padding-bottom: 30px;
+  padding-top: 10px;
+}
+
+.welcome-text {
+  padding: 20% 0;
+}
+
+.welcome-description {
+  margin-top: 0;
+}
+
+.landing-link {
+  color: $text-color;
+}
