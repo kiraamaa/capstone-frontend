@@ -1,0 +1,17 @@
+{{my-application signOut="signOut"}}
+<div class="col-md-4 pull-right sidebar">
+  <h2 class="neon">
+    Favorites <br>
+  </h2>
+
+  {{#each model as |favorite|}}
+    {{artwalk-favorite/card favorite=favorite
+                      edit='editFavorite'
+                      delete='deleteFavorite'}}
+  {{/each}}
+  <br>
+
+  <button class='btn btn-md'>  {{#link-to 'favorites/new' class="dynamic-a"}}Create a new favorite{{/link-to}}</button>
+  {{!-- {{#link-to 'application' class="dynamic-a"}}Link to home{{/link-to}} --}}
+
+</div>
