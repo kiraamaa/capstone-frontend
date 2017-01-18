@@ -23,7 +23,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/capstone-frontend';
     ENV.locationType = 'hash';
-    ENV.apiHost = '<% replace with the URL to your deployed API %>';
+    ENV.apiHost = 'https://blooming-castle-72694.herokuapp.com';
   }
 
   if (environment === 'test') {
