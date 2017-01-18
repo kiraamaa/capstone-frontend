@@ -1,0 +1,14 @@
+<h3 class="favorite-header" {{action 'toggleFavoriteDetail'}}>{{favorite.title}}</h3>
+<ol>
+  {{#each favorite.walks as |walk|}}
+    {{artwalk-favorite/walk walk=walk
+      toggleDone='toggleWalkDone'
+      delete='deleteWalk'}}
+  {{/each}}
+</ol>
+
+<form {{action 'createWalk' on='submit'}}>
+  {{input placeholder='New Walk'
+    value=newWalk.content}}
+    <button type='submit' class='btn btn-xs'>Create</button>
+</form>
