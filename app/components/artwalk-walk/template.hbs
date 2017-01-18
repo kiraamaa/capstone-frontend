@@ -1,0 +1,14 @@
+<h3 class="artwalk-header" {{action 'toggleArtwalkDetail'}}>{{artwalk.title}}</h3>
+<ol>
+  {{#each artwalk.points as |point|}}
+    {{artwalk-walk/point point=point
+      toggleDone='togglePointDone'
+      delete='deletePoint'}}
+  {{/each}}
+</ol>
+
+<form {{action 'createPoint' on='submit'}}>
+  {{input placeholder='New Point'
+    value=newPoint.content}}
+    <button type='submit' class='btn btn-xs'>Add art destination</button>
+</form>
