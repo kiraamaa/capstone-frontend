@@ -12,10 +12,21 @@ Router.map(function () {
   this.route('users');
 
   this.route('brooklyn-standards');
-  this.route('artwalk', function() {
-    this.route('edit');
-  });
-  this.route('artwalks', function() {
+  // this.route('artwalk', function() {
+  //   this.route('edit');
+  // });
+  // this.route('artwalks', function() {
+  //   this.route('new');
+  // });
+
+  this.route('artwalks');
+  this.route('artwalks/new');
+
+  this.route('artwalk', { path: 'artwalks/:artwalk_id' });
+  this.route('artwalk/edit', { path: 'artwalks/:artwalk_id/edit' });
+
+  this.route('points');
+  this.route('favorites', function() {
     this.route('new');
   });
 });
