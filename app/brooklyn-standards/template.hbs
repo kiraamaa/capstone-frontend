@@ -3,10 +3,10 @@
 
   {{#leaflet-map lat=lat lng=lng zoom=zoom class="leaflet"}}
 
-    {{#if nightMode}}
-      {{tile-layer url="http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"}}
-    {{else}}
+    {{#if dayMode}}
       {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+    {{else}}
+      {{tile-layer url="http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"}}
     {{/if}}
 
     {{#each galleries as |g|}}
@@ -26,7 +26,7 @@
     {{/polyline-layer}}
 
   {{/leaflet-map}}
-  <p><label>{{input type="checkbox" checked=nightMode}} Night mode</label></p>
+  <p class="pull-right"><label>{{input type="checkbox" checked=dayMode}} Day mode</label></p>
   </div>
 
 <div class="col-md-4 gallery" id="gallery-list">
