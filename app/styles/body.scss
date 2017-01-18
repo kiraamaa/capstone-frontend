@@ -1,4 +1,5 @@
 $text-color: #fff;
+$a-color: #000;
 
 body {
   background-image: url('/assets/images/bw.jpg');
@@ -7,4 +8,16 @@ body {
   background-size: 100%;
   color: $text-color;
   font-family: 'Quattrocento', serif;
+}
+
+a {
+  color: $a-color;
+}
+
+.dynamic-a {
+  color: $text-color;
+}
+
+.container-fluid {
+  padding: 0;
 }

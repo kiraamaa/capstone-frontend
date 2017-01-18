@@ -1,6 +1,25 @@
+$background-opacity: rgba(0, 0, 0, .7);
+
 .leaflet {
-  height: 400px;
+  height: 600px;
   position: relative;
   width: 100%;
   z-index: 1;
+}
+
+.popup-image {
+  height: 140px;
+  width: 210px;
+}
+
+.gallery {
+  margin-top: -1px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#gallery-list {
+  background-color: $background-opacity;
+  height: 600px;
+  padding-left: 15px;
 }

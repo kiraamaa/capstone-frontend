@@ -1,3 +1,6 @@
+$text-color: #fff;
+$icon-bar: #000;
+
 .navbar-collapse {
   background: $text-color;
   border-top: 0;
@@ -5,4 +8,21 @@
   margin-left: -15px;
   margin-right: -15px;
   padding-right: 30px;
+}
+
+.navbar-header {
+  background: $text-color;
+  margin-bottom: 0;
+}
+
+.icon-bar {
+  background: $icon-bar;
+}
+
+.nav > li > a {
+  margin-left: 10px;
+}
+
+.navbar-nav > li > .dropdown-menu {
+  margin-left: 10px;
 }
