@@ -12,6 +12,9 @@ Router.map(function () {
   this.route('users');
 
   this.route('brooklyn-standards');
+  this.route('artwalk', function() {
+    this.route('edit');
+  });
 });
 
 export default Router;
