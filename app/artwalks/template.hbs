@@ -1,5 +1,50 @@
 {{my-application signOut="signOut"}}
 
+<div class="col-md-8 gallery">
+
+  {{#leaflet-map lat=lat lng=lng zoom=zoom class="leaflet"}}
+
+    {{#if dayMode}}
+      {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+    {{else}}
+      {{tile-layer url="http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"}}
+    {{/if}}
+
+    {{#each galleries as |g|}}
+      {{#marker-layer lat=g.lat lng=g.lng draggable=true onDragend=(action "updateLocation" g)}}
+        {{#popup-layer popupOpen=(readonly g.isOpen)}}
+          <h3>{{g.name}}</h3>
+          <img src={{g.image}} class="popup-image center-block"><br>
+          {{g.description}}
+        {{/popup-layer}}
+      {{/marker-layer}}
+    {{/each}}
+
+    {{!-- {{#polyline-layer locations=dangerZone color="#4B2231"}}
+      {{#tooltip-layer sticky=true}}
+        DANGER ZONE
+      {{/tooltip-layer}}
+    {{/polyline-layer}} --}}
+
+  {{/leaflet-map}}
+  <p class="pull-right"><label>{{input type="checkbox" checked=dayMode}} Day mode</label></p>
+  </div>
+
+{{!-- <div class="col-md-4 gallery" id="gallery-list">
+  <h3>Brooklyn Culture</h3>
+  <ul>
+    {{#each galleries as |g|}}
+      <li>
+        <strong>{{g.name}}</strong><br>
+        {{!-- Lat: {{input value=r.lat}}
+        Lng: {{input value=r.lng}}
+        <label>{{input type="checkbox" checked=r.isOpen}} Popup open?</label>
+      </li>
+    {{/each}}
+  </ul>
+</div> --}}
+
+
 <div class="col-md-4 pull-right sidebar">
 <h2>
   Artwalks
