@@ -14,7 +14,7 @@ export default Ember.Route.extend({
     },
     cancel (favorite) {
       favorite.rollbackAttributes();
-      this.transitionTo('favorite');
+      this.transitionTo('favorites');
     },
     willTransition () {
      let store = this.get('store');
