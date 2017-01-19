@@ -1,17 +1,20 @@
 /* jshint node: true */
 
 module.exports = function (environment) {
-  var ENV = {
+  'use strict';
+  const ENV = {
     modulePrefix: 'capstone-frontend',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
-    apiHost: 'http://localhost:4741',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       }
+    },
+    EXTEND_PROTOTYPES: {
+      Date: false,
     },
 
     APP: {
@@ -20,10 +23,16 @@ module.exports = function (environment) {
     },
   };
 
-  if (environment === 'production') {
-    ENV.rootURL = '/capstone-frontend';
-    ENV.locationType = 'hash';
-    ENV.apiHost = 'https://blooming-castle-72694.herokuapp.com';
+  if (environment === 'development') {
+    // ENV.APP.LOG_RESOLVER = true;
+    // ENV.APP.LOG_ACTIVE_GENERATION = true;
+    // ENV.APP.LOG_TRANSITIONS = true;
+    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    let port = +('GA'.split('').reduce((p, c) =>
+      p + c.charCodeAt().toString(16), '')
+    );
+    ENV.apiHost = `http://localhost:${port}`;
   }
 
   if (environment === 'test') {
@@ -39,7 +48,9 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
+    ENV.rootURL = '/capstone-frontend/';
     ENV.locationType = 'hash';
+    ENV.apiHost = 'https://blooming-castle-72694.herokuapp.com';
   }
 
   return ENV;
