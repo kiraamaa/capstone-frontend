@@ -12,6 +12,11 @@ export default Ember.Route.extend({
     deleteArtwalk (artwalk) {
       artwalk.destroyRecord();
     },
+    createNewFavorite (artwalk) {
+      console.log("inside artwalks route, new favorite artwalk is", artwalk);
+      let favorite = this.get('store').createRecord('favorite', artwalk);
+      favorite.save();
+    },
     willTransition () {
      let store = this.get('store');
      store.peekAll('artwalk').forEach(function (artwalk) {

@@ -6,6 +6,9 @@ export default Ember.Component.extend({
   //   console.log("points is", points);
   //   return points.ids().length === 0;
   // }),
+  newFavorite: {
+    title: null,
+  },
   actions: {
     edit () {
       console.log("inside editWalk in artwalk-walk/card component");
@@ -17,8 +20,14 @@ export default Ember.Component.extend({
 
       this.sendAction('delete', this.get('artwalk'));
     },
-    createFavorite () {
+    createNewFavorite () {
       console.log("in create favorite");
+      let data = this.get('newFavorite');
+      console.log("this is createNewFavorite data inside editWalk", data.title);
+      data.artwalk = this.get('artwalk');
+      data.title = this.get('artwalk.title');
+      console.log("this is createNewFavorite data inside editWalk after", data.title);
+      this.sendAction('createNewFavorite', data);
     },
   },
 });

@@ -53,7 +53,8 @@
   {{#each model as |artwalk|}}
     {{artwalk-walk/card artwalk=artwalk
                       edit='editArtwalk'
-                      delete='deleteArtwalk'}}
+                      delete='deleteArtwalk'
+                      createNewFavorite='createNewFavorite'}}
   {{/each}}<br>
 
   <button class='btn btn-md'>{{#link-to 'artwalks/new' class="dynamic-a"}}Create a new artwalk{{/link-to}}</button>
