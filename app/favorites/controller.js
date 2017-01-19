@@ -31,6 +31,20 @@ export default Ember.Controller.extend({
       lat: 40.707463,
       lng: -73.932686,
     },
+    {
+      name: 'Sardine',
+      image: 'https://news.artnet.com/app/news-upload/2015/03/sardine.jpg',
+      description: 'This tiny gallery space, situated in Brooklyn’s Bushwick neighborhood, allows viewers to look at art in an intimate setting. Founded and run by Lacey Fekishazy and Jon Lutz, the space specializes in solo shows—up now at the gallery is a solo exhibition featuring works by Brooklyn-based artist Jaime Gecker.',
+      lat: 40.702074,
+      lng: -73.918738
+    },
+    {
+      name: 'Mociun',
+      image: 'https://media.glamour.com/photos/56964e0e16d0dc3747efa509/master/pass/fashion-2013-12-03-jj-caitlin-mociun-main.jpg',
+      description: 'Mociun is a fine jewelry line and brick & mortar store based in Brooklyn, New York. Founded by Caitlin Mociun, the fine jewelry line is known for unique turquoise and diamond combinations, and one-of-kind stone cluster rings using antique diamonds and rare gemstones.',
+      lat: 40.717922,
+      lng: -73.962570,
+    },
   ]),
 
   dangerZone: Ember.computed('galleries.@each.lat', 'galleries.@each.lng', function() {
