@@ -24,6 +24,7 @@ Router.map(function () {
   this.route('favorites/new');
   this.route('favorite', { path: 'favorites/:favorite_id' });
   this.route('favorite/edit', { path: 'favorites/:favorite_id/edit' });
+  this.route('hipster-galleries');
 });
 
 export default Router;
