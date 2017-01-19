@@ -15,12 +15,24 @@ export default Ember.Route.extend({
     createNewFavorite (artwalk) {
       console.log("inside artwalks route, new favorite artwalk is", artwalk);
       let favorite = this.get('store').createRecord('favorite', artwalk);
-      favorite.save();
+
+      favorite.save()
+        .then(() => {
+          console.log("inside then");
+          this.transitionTo('favorites');
+        })
+        .catch(() => {
+          favorite.destroyRecord();
+          this.get('flashMessages')
+          .danger('You already favorited this artwalk.');
+        });
+
+      favorite.rollbackAttributes();
     },
     willTransition () {
      let store = this.get('store');
      store.peekAll('artwalk').forEach(function (artwalk) {
-       if (artwalk.get('isNew') && artwalk.get('hasDirtyAttributes')) {
+       if (artwalk.get('hasDirtyAttributes')) {
          artwalk.rollbackAttributes();
        }
      });
