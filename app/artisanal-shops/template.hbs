@@ -10,7 +10,7 @@
     {{/if}}
 
     {{#each galleries as |g|}}
-      {{#marker-layer lat=g.lat lng=g.lng draggable=true onDragend=(action "updateLocation" g)}}
+      {{#marker-layer lat=g.lat lng=g.lng draggable=false onDragend=(action "updateLocation" g)}}
         {{#popup-layer popupOpen=(readonly g.isOpen)}}
           <h3>{{g.name}}</h3>
           <img src={{g.image}} class="popup-image center-block"><br>
