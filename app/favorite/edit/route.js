@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model (params) {
     console.log(params);
-    return this.get('store').findRecord('favorite', params.favorite_id);
+    return this.get('store').findRecord('artwalk', params.artwalk_id);
   },
   actions: {
     saveFavorite (favorite) {

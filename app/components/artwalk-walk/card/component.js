@@ -17,5 +17,8 @@ export default Ember.Component.extend({
 
       this.sendAction('delete', this.get('artwalk'));
     },
+    createFavorite () {
+      console.log("in create favorite");
+    },
   },
 });
