@@ -5,14 +5,14 @@
 
 
 {{!-- {{#if isEmpty}} --}}
-<button class='btn btn-xs' {{action 'delete'}}>Delete</button>
+{{!-- <button class='btn btn-xs' {{action 'delete'}}>Delete</button> --}}
 {{!-- {{/if}} --}}
 
 
-<button class='btn btn-xs' {{action 'edit'}}>Edit</button>
+{{!-- <button class='btn btn-xs' {{action 'edit'}}>Edit</button> --}}
 
 <form {{action 'createFavorite' on='submit'}}>
-  {{input value=artwalk.title}}
+  {{input value=artwalk.title type="hidden"}}
   <button type='submit' class='btn btn-xs' {{action 'createNewFavorite'}}>Add to Favorites</button>
 </form>
 </h4>
