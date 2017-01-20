@@ -1,7 +1,7 @@
 {{my-application signOut="signOut"}}
 <div class="col-md-8 gallery">
 
-  {{#leaflet-map lat=lat lng=lng zoom=zoom class="leaflet"}}
+  {{#leaflet-map lat=lat lng=lng zoom=zoom class="leaflet" scrollWheelZoom=false }}
 
     {{#if dayMode}}
       {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
