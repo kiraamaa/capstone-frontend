@@ -23,9 +23,10 @@ export default Ember.Component.extend({
       console.log("in create favorite");
       let data = this.get('newFavorite');
       console.log("this is createNewFavorite data inside editWalk", data.title);
-      data.artwalk = this.get('artwalk');
+      data.artwalkId = this.get('artwalk').get('id');
       data.title = this.get('artwalk.title');
       console.log("this is createNewFavorite data inside editWalk after", data.title);
+      console.log("this is data in createNewFavorite", data);
       this.sendAction('createNewFavorite', data);
     },
   },
