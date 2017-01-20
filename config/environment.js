@@ -48,7 +48,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = '/capstone-frontend/';
+    ENV.rootURL = '/capstone-frontend';
     ENV.locationType = 'hash';
     ENV.apiHost = 'https://blooming-castle-72694.herokuapp.com';
   }
