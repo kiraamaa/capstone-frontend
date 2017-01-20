@@ -5,7 +5,7 @@ Deployed back end: https://blooming-castle-72694.herokuapp.com<br>
 Front end repository: https://github.com/kiraamaa/capstone-frontend<br>
 Back end repository: https://github.com/kiraamaa/brooklyn-artwalk-backend
 
-![Image of Yaktocat](http://i.imgur.com/Xjzb8df.png)
+![Image of Brooklyn Artwalks](http://i.imgur.com/Xjzb8df.png)
 
 ## Technologies Used
 
@@ -53,7 +53,7 @@ I want to delete my favorite walk(s).<br>
 
 ## Wireframes
 
-(http://i.imgur.com/4k5Wk3M.jpg)
+![Image of Wireframes](http://i.imgur.com/4k5Wk3M.jpg)
 
 ## ERD
-(http://i.imgur.com/VWKDbgo.png)
+![Image of ERD](http://i.imgur.com/VWKDbgo.png)
