@@ -1,31 +1,33 @@
 # Brooklyn Artwalks
 Deployed front end: https://kiraamaa.github.io/capstone-frontend<br>
-Deployed back end: https://hidden-lowlands-96809.herokuapp.com<br>
+Deployed back end: https://blooming-castle-72694.herokuapp.com<br>
 
-Front end repository: https://github.com/kiraamaa/cheese-plate-app<br>
-Back end repository: https://github.com/kiraamaa/cheese-plate-generator-api
+Front end repository: https://github.com/kiraamaa/capstone-frontend<br>
+Back end repository: https://github.com/kiraamaa/brooklyn-artwalk-backend
+
+![Image of Yaktocat](http://i.imgur.com/Xjzb8df.png)
 
 ## Technologies Used
 
--   Ruby on Rails
+-   Ember.js
 -   Javascript
 -   HTML5
 -   CSS3
--   Bootstrap
+-   Ruby on Rails
 
 ## What It Is & How It Works
 
-I wanted to design an app that generated customizable cheese plates, and came up with this idea in my quest to find a good resource that would give me new cheeses to try for a dinner party or just in general.
+I wanted to design an app that generated curated walks to view art around Brooklyn, and came up with this idea in my quest to find a good resource that would give my friends and family a guide to art venues around the city.
 
-This app currently works by generating new, empty cheeseplate objects and returning a list of various cheeses that exist in my SQL database. Users can currently create a new cheeseplate, change the name of a given cheeseplate, and delete a given cheeseplate.
+This app works by generating distinct walks with points that correspond to different art galleries, museums, and shops around Brooklyn. Each route is semantically named and shows users a polyline route that they can follow for a walking trip around the city. Users can favorite a given artwalk, give their favorite a new name (if desired), and delete the favorite as necessary.
 
-I would like to enhance this app moving forward by allowing users to add cheeses to a given cheeseplate, and store representative cheese images in my database so that users have a better idea of what cheeses to choose.
+I would like to enhance this app moving forward by allowing users to add points to their favorite routes, and add an animation that draws the route in real time.
 
 ## Development Process
 
 1. Research app requirements and technologies.
 2. Write out user stories for app.
-3. Create wireframes for app using Sketch.
+3. Create wireframes for app.
 4. Craft a list of necessary parts.
 5. Devise a version control workflow:
   -   Branch large-scope features such as 'front-end' or 'back-end' off of 'master', and then branch smaller feature branches off of those.
@@ -43,15 +45,15 @@ I would like to enhance this app moving forward by allowing users to add cheeses
 
 ## User Stories
 
-As a user I want to be able to determine my cheese flavor preferences.<br>
-As a user I want to be able to see a cheese plate in line with my preferences.<br>
-As a user I want to be able to see the individual cheese with a description.<br>
-As a user I want to be able to remove cheeses from my cheese plate.<br>
-As a user I want to be able to add cheeses to my cheese plate.<br>
-As a user I want to be able to save cheese plates for future reference.<br>
+I want to see art walks.<br>
+I want to see points of interest on each art walk.<br>
+I want to be able to favorite an artwalk.<br>
+I want to edit the name of my favorite walk(s).<br>
+I want to delete my favorite walk(s).<br>
 
 ## Wireframes
 
-Landing page: http://i.imgur.com/rBw3UOL.png<br>
-Cheeese plate flavor quiz: http://i.imgur.com/ZSkNitH.jpg<br>
-Cheese plate quiz result:http://i.imgur.com/R8mJ9x5.png<br>
+(http://i.imgur.com/4k5Wk3M.jpg)
+
+## ERD
+(http://i.imgur.com/VWKDbgo.png)
