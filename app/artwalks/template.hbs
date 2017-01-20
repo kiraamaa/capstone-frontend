@@ -51,10 +51,12 @@
 </h2>
 
   {{#each model as |artwalk|}}
+  {{#if artwalk.title}}
     {{artwalk-walk/card artwalk=artwalk
                       edit='editArtwalk'
                       delete='deleteArtwalk'
                       createNewFavorite='createNewFavorite'}}
+  {{/if}}
   {{/each}}<br>
 
   {{!-- <button class='btn btn-md'>{{#link-to 'artwalks/new' class="dynamic-a"}}Create a new artwalk{{/link-to}}</button> --}}

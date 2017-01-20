@@ -29,7 +29,7 @@ export default Ember.Route.extend({
         this.transitionTo('/sign-in');
       } else {
         this.get('flashMessages')
-        .danger('There was a problem. Please try again.');
+        .danger('There was a problem. Please try again or return home.');
       }
 
       return false;
