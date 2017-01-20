@@ -12,7 +12,10 @@
 {{!-- <button class='btn btn-xs' {{action 'edit'}}>Edit</button> --}}
 
 <form {{action 'createFavorite' on='submit'}} class="add-favorite">
+  {{#if isAuthenticated}}
   {{input value=artwalk.title type="hidden"}}
   <button type='submit' class='btn btn-xs' {{action 'createNewFavorite'}}>Add to Favorites</button>
+  {{/if}}
 </form>
+
 </h4>

@@ -1,11 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  // isEmpty: Ember.computed('artwalk', function() {
-  //   let points = this.get('artwalk').hasMany('points');
-  //   console.log("points is", points);
-  //   return points.ids().length === 0;
-  // }),
+  auth: Ember.inject.service(),
+
+  isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
+
   newFavorite: {
     title: null,
   },
